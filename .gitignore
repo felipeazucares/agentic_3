@@ -36,3 +36,4 @@ Thumbs.db
 *.swo
 
 progress.md
+.python-version
