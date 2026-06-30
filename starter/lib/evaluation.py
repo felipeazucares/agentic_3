@@ -7,7 +7,9 @@ from lib.state_machine import Run
 from lib.llm import LLM
 from lib.messages import AIMessage, BaseMessage
 from lib.parsers import PydanticOutputParser
-
+class EvaluationReport(BaseModel):
+    useful: bool = Field(description="Whether the documents are useful to answer the question")
+    description: str = Field(description="Description about the evaluation result")
 
 class TaskCompletionMetrics(BaseModel):
     """Metrics for task completion evaluation"""
